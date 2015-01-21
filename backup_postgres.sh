@@ -37,8 +37,9 @@ function log() {
 }
 
 function print_help() {
- echo "Help block here..."
- exit 1
+  #echo "Help block here..."
+  echo "$0 <--db name1...--db name2> [--rotate days_num] [--log-file file] [--local-dir dir] [--host ip|name] [--user user] "
+  exit 1
 }
 
 
