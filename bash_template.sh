@@ -3,6 +3,8 @@
 set -o nounset
 
 # global vars #
+fullpath=$(readlink -f $0)
+scriptDir=$(dirname $fullpath)
 
 logfile=""
 
