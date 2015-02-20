@@ -27,19 +27,32 @@ function print_help() {
  exit 1
 }
 
+function exit_with_error() {
+ local msg
+
+ msg="ERR : $@"
+ 
+ log $msg
+ exit 2
+}
+
+
+# params
+key=""
+
 while [ $# -ne 0 ]
 do
 	case "$1" in
 		--key)
-			value=$2
+			key=$2
 			shift; shift;
+		;;
+		--help)
+			print_help
 		;;
 		*)
 			print_help
-			exit 1
 		;;
 
 	esac
 done
-
-
